@@ -1,0 +1,5 @@
+<library path="lib/libMrsUavStateEstimators_Aloam">
+  <class name="aloam/AloamEstimatorPlugin" type="aloam::Aloam" base_class_type="mrs_uav_managers::StateEstimator">
+    <description>ALOAM state estimator</description>
+  </class>
+</library>
