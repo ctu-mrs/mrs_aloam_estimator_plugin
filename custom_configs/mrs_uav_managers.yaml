@@ -3,8 +3,7 @@ mrs_uav_managers:
   estimation_manager:
 
     state_estimators: [
-     "aloam",
-     "ground_truth"
+     "aloam"
     ]
 
     initial_state_estimator: "aloam" # will be used as the first state estimator
@@ -168,8 +167,7 @@ mrs_uav_managers:
   constraint_manager:
 
     estimator_types: [
-      "aloam",
-      "ground_truth"
+      "aloam"
     ]
 
     constraints: [
@@ -181,19 +179,16 @@ mrs_uav_managers:
     # list of allowed gains per odometry mode
     allowed_constraints:
       aloam: ["slow", "medium", "fast"]
-      ground_truth: ["slow", "medium", "fast"]
 
     # those gains will be used automatically when a localization mode switches
     # and the current gains are not in the allowed list (next paragraphs)
     default_constraints:
       aloam: "slow"
-      ground_truth: "slow"
 
   gain_manager:
 
     estimator_types: [
-      "aloam",
-      "ground_truth"
+      "aloam"
     ]
 
     gains: [
@@ -203,13 +198,11 @@ mrs_uav_managers:
     # list of allowed gains per odometry mode
     allowed_gains:
       aloam: ["supersoft"]
-      ground_truth: ["supersoft"]
 
     # those gains will be used automatically when a localization mode switches
     # and the current gains are not in the allowed list (next paragraphs)
     default_gains:
       aloam: "supersoft"
-      ground_truth: "supersoft"
 
   transform_manager:
 
